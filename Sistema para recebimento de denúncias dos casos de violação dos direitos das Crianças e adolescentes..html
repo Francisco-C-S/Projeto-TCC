@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de recebimento de denúncias de casos de violação dos direitos das Crianças e adolescentes.</title>
+
+      <!-- style CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container mt-5 mb-3 text-center">
+      <h5 class="style-color">
+        BEM VINDO AO SISTEMA DE RECEBIMENTO DE DENÚNCIAS DE CASOS DE VIOLAÇÃO
+        DOS DIREITOS DAS CRIANÇAS E ADOLESCENTES, VINCULADO AO CONSELHO TUTELAR DE
+        OEIRAS-PI.
+      </h5>
+    </div>
+    <hr class="mb-5 style-width"/>
+    <div class="container mb-5">
+      <div class="card">
+        <div class="card-header text-center">
+          <h5>PREENCHA O FORMULÁRIO ABAIXO PARA SER EFETUADA E ENCAMINHADA A DENÚNCIA</h5>
+        </div>
+        <div class="card-body">
+          <form action="https://api.staticforms.xyz/submit" method="POST">
+            <input type="hidden" name="accessKey" value="598d37f7-b6d4-419f-8c45-98f795b6ff16">
+            <!--input type="hidden" name="redirectTo" value="projeto_tcc.html"-->
+    
+            <div class="form-group mt-3">
+
+               <div class="row">                  
+                <label for="cars" class="col-form-label col-sm-2 pt-0">DENUNCIANTE:</label>
+                <div class="col-sm-10">
+                  <select name="$DENUNCIANTE:" class="form-control" required>
+                    <option value="">Selecione uma opção...</option>
+                    <option value="ESCOLA">ESCOLA</option>
+                    <option value="HOSPITAL">HOSPITAL</option>
+                    <option value="PESSOA ANÔNIMA">PESSOA ANÔNIMA</option>
+                    <option value="POLÍCIA">POLÍCIA</option>
+                    <option value="OUTROS">OUTROS</option>
+                  </select>
+                </div>
+              </div>
+            </div><br />
+
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">DESCRIÇÃO DO DENUNCIANTE(OPCIONAL):</label>
+              <textarea class="form-control style-css" name="$DESCRIÇÃO DO DENUNCIANTE(OPCIONAL):" id="exampleFormControlTextarea1" rows="1"></textarea>
+            </div><br />
+
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">MEIO PARA POSSÍVEL CONTATO(TELEFONE, EMAIL, ETC.(OPCIONAL)):</label>
+              <textarea class="form-control style-css" name="$MEIO PARA POSSÍVEL CONTATO(TELEFONE, EMAIL, ETC.(OPCIONAL)):" id="exampleFormControlTextarea1" rows="1"></textarea>
+            </div><br />
+
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">DESCRIÇÃO DA DENÚNCIA:</label>
+              <textarea class="form-control style-css" name="$DESCRIÇÃO DA DENÚNCIA:" id="exampleFormControlTextarea1" rows="2" required></textarea>
+            </div> <br/>
+
+            <div class="form-group">
+              <div class="row">
+                <legend class="col-form-label col-sm-3 pt-0">NATUREZA DA VIOLAÇÃO:</legend>
+                <div class="col-sm-9">
+
+                  <div class="form-check  form-check-inline">
+                    <input class="form-check-input" type="radio" name="$NATUREZA DA VIOLAÇÃO:" id="exampleRadios1" value="INDIVIDUAL">
+                    <label class="form-check-label" for="exampleRadios1">
+                      INDIVIDUAL
+                    </label>
+                  </div>
+
+                  <div class="form-check  form-check-inline">
+                    <input class="form-check-input" type="radio" name="$NATUREZA DA VIOLAÇÃO:" id="exampleRadios2" value="COLETIVO">
+                    <label class="form-check-label" for="exampleRadios2">
+                      COLETIVO
+                    </label>
+                  </div>      
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="row">
+                <legend class="col-form-label col-sm-3 pt-0">AGENTE VIOLADOR:</legend>
+                <div class="col-sm-9">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input"
+                      type="radio"
+                      name="$AGENTE VIOLADOR:"
+                      value="ESTADO"
+                    />
+                    <label class="form-check-label" for="inlineRadio1">ESTADO</label>
+                  </div>
+
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="$AGENTE VIOLADOR:"
+                      value="FAMÍLIA"
+                    />
+                    <label class="form-check-label" for="inlineRadio2">FAMÍLIA</label>
+                  </div>
+
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="$AGENTE VIOLADOR:"
+                      value="PRÓPRIA CRIANÇA/ADOLESCENTE"
+                    />
+                    <label class="form-check-label" for="inlineRadio3">PRÓPRIA CRIANÇA/ADOLESCENTE</label>
+                  </div>
+
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="$AGENTE VIOLADOR:"
+                      value="SOCIEDADE"
+                    />
+                    <label class="form-check-label" for="inlineRadio4">SOCIEDADE</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br />
+
+            <div class="form-group row">
+              <label for="inputData" class="col-sm-2 col-form-label">DATA DA VIOLAÇÃO:</label>
+              <div class="col-sm-10">
+                <input type="date" name="$DATA DA VIOLAÇÃO:" class="form-control" id="inputData" required/>
+              </div>
+            </div>
+            <br />
+
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">ENDEREÇO DA VIOLAÇÃO:</label>
+              <div class="col-sm-9 row">
+                <div class="col-sm-9">
+                  LOGRADOURO(RUA, AVENIDA, PRAÇA ETC.):
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="$ENDEREÇO DA VIOLAÇÃO: LOGRADOURO:"
+                    id="Logradouro"
+                    required
+                  />
+
+                </div>
+                <div class="col-sm-3">
+                  NÚMERO/LOTE/CASA:
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="$NÚMERO/LOTE/CASA:"
+                    id="NÚMERO/LOTE/CASA:"
+                    required
+                  />
+                </div>
+
+                <div class="col-sm-6">
+                  BAIRRO:<input type="text" class="form-control" name="$BAIRRO:" id="BAIRRO:" required/>
+                </div>
+
+                <div class="col-sm-6">
+                  COMPLEMENTO:<input
+                    type="text"
+                    class="form-control"
+                    name="$COMPLEMENTO:"
+                    id="COMPLEMENTO:"
+                  />
+                </div>
+              </div>
+            </div>
+            <br />
+
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">HISTÓRICO DA DENÚNCIA:</label>
+              <textarea
+                class="form-control style-css"
+                id="exampleFormControlTextarea1"
+                name="$HISTÓRICO DA DENÚNCIA:"
+                rows="2"  
+              ></textarea>
+            </div>
+            <br />         
+
+            <div class="form-group row style-f">
+              <div class="col-sm-10">
+                <button class="btn btn-primary" >
+                  ENCAMINHAR DENÚNCIA.
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
